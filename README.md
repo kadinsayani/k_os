@@ -1,3 +1,3 @@
 # k_os
 
-Operating system built in Rust
+Operating system built in Rust ⚡️
