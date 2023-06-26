@@ -14,5 +14,6 @@ The goal of this project is to build upon the foundation provided by blog_os and
 
 1. Shell support
 2. Native CLI code/text editor
+   1. Built in Zig
 3. CLI utilities
    1. File encryption/decryption
