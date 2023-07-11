@@ -9,11 +9,3 @@ This project is inspired by and based on the work of phil-opp/blog_os. I would l
 ## Project Overview
 
 The goal of this project is to build upon the foundation provided by blog_os and develop additional features. By leveraging the knowledge gained from following the blog, I aim to expand upon the existing functionality and contribute my unique ideas to the project. Through this process, I hope to deepen my understanding of operating systems and refine my programming abilities.
-
-## Goals
-
-1. Shell support
-2. Native CLI code/text editor
-   1. Built in Zig
-3. CLI utilities
-   1. File encryption/decryption
