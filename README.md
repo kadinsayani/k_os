@@ -2,6 +2,10 @@
 
 Operating system built in Rust ⚡️
 
+## About
+
+An x86_64 operating system developed in Rust. Includes key features such as memory management, multitasking, and dynamic memory allocation.
+
 ## Acknowledgments
 
 This project is inspired by and based on the work of phil-opp/blog_os. I would like to express my gratitude to phil-opp for their exceptional efforts in creating such a comprehensive resource. I am actively following along with their blog to enhance my understanding and skills in operating systems development.
