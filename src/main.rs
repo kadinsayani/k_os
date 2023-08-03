@@ -6,9 +6,10 @@
 
 extern crate alloc;
 
-use alloc::{boxed::Box, vec, vec::Vec};
+use alloc::{boxed::Box, vec::Vec};
 use bootloader::{entry_point, BootInfo};
 use core::panic::PanicInfo;
+use k_os::task::{simple_executor::SimpleExecutor, Task};
 use k_os::{memory::BootInfoFrameAllocator, println};
 
 entry_point!(kernel_main);
@@ -16,10 +17,7 @@ entry_point!(kernel_main);
 fn kernel_main(boot_info: &'static BootInfo) -> ! {
     use k_os::allocator;
     use k_os::memory;
-    use x86_64::{
-        structures::paging::{Page, Translate},
-        VirtAddr,
-    };
+    use x86_64::VirtAddr;
 
     println!("Hello World{}", "!");
     k_os::init();
@@ -38,6 +36,10 @@ fn kernel_main(boot_info: &'static BootInfo) -> ! {
         vec.push(i);
     }
     println!("vec at {:p}", vec.as_slice());
+
+    let mut executor = SimpleExecutor::new();
+    executor.spawn(Task::new(example_task()));
+    executor.run();
 
     #[cfg(test)]
     test_main();
